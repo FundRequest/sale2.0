@@ -23,7 +23,6 @@
         var minutes = Math.floor(minutesLeft / 60);
         var remainingSeconds = Math.floor(timerSeconds % 60);
 
-
         var daysString = days > 9 ? days : '0' + days;
         var hoursString = hours > 9 ? hours : '0' + hours;
         var minutesString = minutes > 9 ? minutes : '0' + minutes;
@@ -85,6 +84,9 @@
             var sec = diff / 1000;
             var seconds = Math.round(Math.abs(sec));
             startCountDown(seconds);
+        } else {
+            clearInterval(countdownTimer);
+            clearInterval(countdownReInit);
         }
     }
 
