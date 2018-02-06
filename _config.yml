@@ -8,6 +8,7 @@ url: "" # the base hostname & protocol for your site
 twitter_username: fundrequest_io
 github_username:  FundRequest
 sass:
+  sass_dir: assets/css
   style: compressed
 
 # Build settings

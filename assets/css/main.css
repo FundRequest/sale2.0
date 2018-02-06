@@ -420,3 +420,7 @@ section.partners .nopadding .border-l { border-left: 1px solid #bde4f6; }
 		max-width: 185px !important;
 	}
 }
+
+
+
+h2 .svg-inline--fa { vertical-align: baseline; }
