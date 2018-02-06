@@ -9,16 +9,8 @@ pagina: Home
 <body>
 <nav class="navlinks navbar navbar-fixed-top headroom headroom--pinned animated">
     <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#about">
+            <a class="navbar-brand">
                 <img class="top" src="logos/Fundrequest-title-white.png" alt="Fundrequest logo">
                 <img class="scroll" src="logos/Fundrequest-title.png" alt="Fundrequest logo">
             </a>
@@ -26,25 +18,60 @@ pagina: Home
 
         <div class="collapse navbar-collapse">
             <div class="nav navbar-nav navbar-right">
-                <ul class="clock clock--header">
-                    <li><h3>Token Sale:</h3></li>
-                    <li><span class="days">--</span></li>
-                    <li class="seperator">:</li>
-                    <li><span class="hours">--</span></li>
-                    <li class="seperator">:</li>
-                    <li><span class="minutes">--</span></li>
-                    <li class="seperator">:</li>
-                    <li><span class="seconds">--</span></li>
+                <ul class="clock clock--header hide-on hide-on--sale-closed">
+                    <li class="li">
+                        <h3 class="show-on show-on--sale-not-started">Token Sale Opens In:</h3>
+                        <h3 class="show-on show-on--sale-round1">Round 1 closes in:</h3>
+                        <h3 class="show-on show-on--sale-round2">Round 2 closes in:</h3>
+                        <h3 class="show-on show-on--sale-closed">Token Sale Is Closed</h3>
+                    </li>
+                    <li class="li show-on show-on--sale-not-started"><span class="days">--</span></li>
+                    <li class="li show-on show-on--sale-not-started seperator">:</li>
+                    <li class="li"><span class="hours">--</span></li>
+                    <li class="li seperator">:</li>
+                    <li class="li"><span class="minutes">--</span></li>
+                    <li class="li seperator">:</li>
+                    <li class="li"><span class="seconds">--</span></li>
                 </ul>
             </div>
         </div>
-    </div><!-- /.container-fluid -->
+    </div>
 </nav>
-<section id="about" class="header">
-    <img src="assets/img/rect.png" alt="rectangles" class="rect">
+<section class="header section section--blue">
     <div class="container">
-        <div class="row js_row">
-            <div class="col-md-4 col-md-push-7 tablet-hide">
+        <div class="row">
+            <div class="col-sm-12 col-md-7">
+                <h1>
+                    Token Sale
+                </h1>
+                <h3 class="show-on show-on--sale-not-started">Opens in:</h3>
+                <h3 class="show-on show-on--sale-round1">Round 1 closes in:</h3>
+                <h3 class="show-on show-on--sale-round2">Round 2 closes in:</h3>
+                <h3 class="show-on show-on--sale-closed">Is closed</h3>
+
+                <ul class="clock hide-on hide-on--sale-closed">
+                    <li class="li show-on show-on--sale-not-started">
+                        <span class="days">--</span>
+                        <p class="days_text">Days</p>
+                    </li>
+                    <li class="li show-on show-on--sale-not-started seperator">:</li>
+                    <li class="li">
+                        <span class="hours">--</span>
+                        <p class="hours_text">Hours</p>
+                    </li>
+                    <li class="li seperator">:</li>
+                    <li class="li">
+                        <span class="minutes">--</span>
+                        <p class="minutes_text">Minutes</p>
+                    </li>
+                    <li class="liseperator">:</li>
+                    <li class="li">
+                        <span class="seconds">--</span>
+                        <p class="seconds_text">Seconds</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-12 col-md-5 tablet-hide">
                 <div class="centerdiv">
                     <div class="center">
                         <img class="align-middle" src="assets/img/headerimg.png"
@@ -52,133 +79,126 @@ pagina: Home
                     </div>
                 </div>
             </div>
-            <div class=".col-sm-12 col-md-6 col-md-pull-4">
-                <h1>
-                    Token Sale
-                </h1>
-                <img class="hide tablet-show" src="assets/img/headerimg.png"
-                     alt="A deventralized marketplace for open source collaboration">
-                <div>
-                    <ul class="clock">
-                        <li><span class="days">--</span>
-                            <p class="days_text">Days</p></li>
-                        <li class="seperator">:</li>
-                        <li><span class="hours">--</span>
-                            <p class="hours_text">Hours</p></li>
-                        <li class="seperator">:</li>
-                        <li><span class="minutes">--</span>
-                            <p class="minutes_text">Minutes</p></li>
-                        <li class="seperator">:</li>
-                        <li><span class="seconds">--</span>
-                            <p class="seconds_text">Seconds</p></li>
-                    </ul>
-                </div>
+            <div class="col-sm-12">
+                <button class="btn btn-warning btn-lg show-on show-on--sale-not-started" disabled>Join Soon</button>
+                <button class="btn btn-warning btn-warning--glow btn-lg show-on show-on--sale-round1 show-on show-on--sale-round2"
+                        data-toggle="modal" data-target="#modal-token-sale">
+                    Join Token Sale
+                </button>
             </div>
-        </div>
-        <a class="scrolltonext" href="#">
-            <div class="scroller">
-                <img src="assets/img/scroll2.png" alt="scroll image"> <br>
-                <span>scroll</span>
-            </div>
-        </a>
-    </div>
-    <div class="triangle-bottom">
-        <img src="assets/img/triangle-bottom.png" alt="">
-    </div>
-
-</section>
-
-<section class="info">
-    <div class="container">
-        <h2>
-            <small><i class="fas fa-info-circle"></i></small>
-            Information
-        </h2>
-        <div class="row">
-            <div class="col-md-10">
-                <div><strong>10,800,000 FND</strong> for sale at a rate of <strong>1800 FND/ETH</strong></div>
-                <div>For more info, see <a href="https://docs.fundrequest.io/display/PUB/Token+Sale" target="_blank">token
-                    distribution</a>
-                </div>
-            </div>
-        </div>
-
-        <h2>
-            <small><i class="far fa-list-alt"></i></small>
-            Prerequisites
-        </h2>
-        <div class="row">
-            <div class="col-md-10">
-                <div>You must be whitelisted and have passed the KYC process.</div>
-                <div>To check your status go to <a href="https://kyc.fundrequest.io" target="_blank">https://kyc.fundrequest.io</a>
-                </div>
-            </div>
-        </div>
-
-
-        <h2>
-            <small><i class="far fa-calendar-alt"></i></small>
-            Date
-        </h2>
-        <div class="row marginleft15">
-            <div class="col-md-10">
-                From February 12 at 10 AM CET (9 AM UTC), until February 14 at 10 AM CET (9 AM UTC)
-            </div>
-
-        </div>
-        <p></p>
-
-        <div title="Add to Calendar" class="addeventatc marginleft15">
-            Add to Calendar
-            <span class="start">02/12/2018 09:00 AM</span>
-            <span class="end">02/14/2018 09:00 AM</span>
-            <span class="timezone">UTC</span>
-            <span class="title">FundRequest Token Sale</span>
-            <span class="description">FundRequest Token Sale</span>
-            <span class="location">https://fundrequest.io</span>
         </div>
     </div>
 </section>
 
-
-<section id="team" class="team">
-    <img src="assets/img/section-5A.png" alt="" class="top">
-    <img src="assets/img/section-5B.png" alt="" class="bottom">
+<section class="section section--white section--compact">
     <div class="container">
-        <div clas="row">
+        <div class="row">
             <div class="col-md-6">
-                <h2>Round 1</h2>
-                The first 24 hours of the token sale will be individually capped with a minimum and maximum contribution
+                <h2>
+                    Round 1
+                    <span class="show-on show-on--sale-round1">- OPEN</span>
+                    <span class="show-on show-on--sale-round2 show-on show-on--sale-closed">- CLOSED</span>
+                </h2>
+                <span>The first 24 hours of the token sale will be individually capped with a minimum and maximum contribution
                 per
-                person.
+                person.</span>
                 <ul>
                     <li>Minimum contribution : 0,01 ETH</li>
                     <li>Maximum contribution : 1 ETH</li>
                     <li>Gas Limit : TBD</li>
                 </ul>
+                <button class="btn btn-warning btn-lg show-on show-on--sale-not-started" disabled>Join Soon</button>
+                <button class="btn btn-warning btn-warning--glow btn-lg show-on show-on--sale-round1"
+                        data-toggle="modal" data-target="#modal-token-sale">
+                    Join Token Sale
+                </button>
+                <button class="btn btn-warning btn-lg show-on show-on--sale-round2 show-on show-on--sale-closed"
+                        disabled>CLOSED
+                </button>
             </div>
             <div class="col-md-6">
-                <h2>Round 2</h2>
-                February 13 at 10 AM CET (9 AM UTC).
+                <h2>Round 2
+                    <span class="show-on show-on--sale-round2">- OPEN</span>
+                    <span class="show-on show-on--sale-closed">- CLOSED</span>
+                </h2>
+                <span>February 13 at 10 AM CET (9 AM UTC).
                 The individual cap per person is lifted. It is now possible to contribute more than 1 ETH until the hard
                 cap
-                is reached.
+                is reached.</span>
                 <ul>
                     <li>Minimum contribution : 0,01 ETH</li>
+                    <li>Maximum contribution : no limit until hard cap reached</li>
                     <li>Gas Limit : TBD</li>
                 </ul>
+                <button class="btn btn-warning btn-lg show-on show-on--sale-not-started show-on show-on--sale-round1"
+                        disabled>Join soon
+                </button>
+                <button data-token-sale class="btn btn-warning btn-warning--glow btn-lg show-on show-on--sale-round2"
+                        data-toggle="modal" data-target="#modal-token-sale">
+                    Join Token Sale
+                </button>
+                <button class="btn btn-warning btn-lg show-on show-on--sale-closed" disabled>CLOSED</button>
             </div>
         </div>
     </div>
-    <div class="triangle-top">
-        <img src="assets/img/triangle-top.png" alt="">
-    </div>
-    <div class="triangle-bottom">
-        <img src="assets/img/triangle-bottom.png" alt="">
+</section>
+
+<section class="section section--gray section--bottom-squares section--compact">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h2>
+                    <small><i class="fas fa-info-circle"></i></small>
+                    <span>Information</span>
+                </h2>
+                <div class="row">
+                    <div class="col-md-10">
+                        <div><strong>10,800,000 FND</strong> for sale at a rate of <strong>1800 FND/ETH</strong></div>
+                        <div>For more info, see <a href="https://docs.fundrequest.io/display/PUB/Token+Sale"
+                                                   target="_blank">token
+                            distribution</a>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>
+                    <small><i class="far fa-list-alt"></i></small>
+                    <span>Prerequisites</span>
+                </h2>
+                <div class="row">
+                    <div class="col-md-10">
+                        <div>You must be whitelisted and have passed the KYC process.</div>
+                        <div>To check your status go to <a href="https://kyc.fundrequest.io" target="_blank">https://kyc.fundrequest.io</a>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>
+                    <small><i class="far fa-calendar-alt"></i></small>
+                    <span>Date</span>
+                </h2>
+                <div class="row">
+                    <div class="col-md-10">
+                        From February 12 at 10 AM CET (9 AM UTC), until February 14 at 10 AM CET (9 AM UTC)
+                    </div>
+                </div>
+                <p></p>
+
+                <div title="Add to Calendar" class="addeventatc">
+                    <span>Add to Calendar</span>
+                    <span class="start">02/12/2018 09:00 AM</span>
+                    <span class="end">02/14/2018 09:00 AM</span>
+                    <span class="timezone">UTC</span>
+                    <span class="title">FundRequest Token Sale</span>
+                    <span class="description">FundRequest Token Sale</span>
+                    <span class="location">https://fundrequest.io</span>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<section class="partners">
+<section class="partners section section--white section--compact">
     <div class="container">
         <div class="row">
             <div class="nopadding">
@@ -199,7 +219,7 @@ pagina: Home
         </div>
     </div>
 </section>
-<section class="footer">
+<section class="footer section section--blue section--compact section--end">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-4 col-md-2 navlinks">
@@ -279,28 +299,782 @@ pagina: Home
                                     <img src="assets/img/chainfinance.png" alt="Chainfinance">
                                 </a>
                             </li>
-                            <li>
-                                <a target="_blank"
-                                   href="http://www.the-blockchain.com/2017/11/01/fundrequest-launches-blockchain-incentive-platform-open-source-projects/">
-                                    <img src="assets/img/blockchainnews.png" alt="Blockchain">
-                                </a>
-                            </li>
-                            <li>
-                                <a target="_blank"
-                                   href="https://www.chipin.com/fundrequest-ico-rewarding-contributions-crypto/">
-                                    <img src="assets/img/chipin.png" alt="Chipin">
-                                </a>
-                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="triangle-top">
-        <img src="assets/img/triangle-top.png" alt="">
-    </div>
 </section>
+
+<div class="modal fade" id="modal-token-sale" tabindex="-1" role="dialog" aria-labelledby="modal-token-sale-labelledby">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title text-center" id="modal-token-sale-labelledby">
+                    <span>Token Sale: </span>
+                    <span class="show-on show-on--sale-round1">Round 1</span>
+                    <span class="show-on show-on--sale-round2">Round 2</span>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="show-on show-on--sale-terms-agreed">
+                    <div class="show-on show-on--sale-round1">
+                        <span>
+                            The first 24 hours of the token sale will be individually capped with a minimum
+                            and maximum contribution perperson.
+                        </span>
+                        <ul>
+                            <li>Minimum contribution : 0,01 ETH</li>
+                            <li>Maximum contribution : 1 ETH</li>
+                            <li>Gas Limit : TBD</li>
+                        </ul>
+                    </div>
+                    <div class="show-on show-on--sale-round2">
+                        <span>
+                            The individual cap per person is lifted. It is now possible to contribute more than 1 ETH
+                            until the hard cap is reached.
+                        </span>
+                        <ul>
+                            <li>Minimum contribution : 0,01 ETH</li>
+                            <li>Maximum contribution : no limit until hard cap reached</li>
+                            <li>Gas Limit : TBD</li>
+                        </ul>
+                    </div>
+                    <div class="alert alert-info">
+                        <h4 class="text-center">Token Sale Smart Contract Address</h4>
+                        <p class="text-center">
+                            <samp class="eth-address">0x0000000000000000000000000000000000000000</samp>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="hide-on hide-on--sale-kyc-verified">
+                    <h5 class="text-center">Enter ETH address to verify KYC</h5>
+                    <div class="input-group">
+                        <span class="input-group-addon">ETH Wallet Address</span>
+                        <input id="eth-address-modal" class="form-control" type="text" maxlength="42" minlength="42"
+                               placeholder="ex. 0x0000000000000000000000000000000000000000"/>
+                        <span class="input-group-btn">
+                            <button data-eth-address-check="eth-address-modal" class="btn btn-warning">Check</button>
+                        </span>
+                    </div>
+                </div>
+                <p data-kyc-status class="kyc-status-message text-center"></p>
+
+                <div class="show-on show-on--sale-kyc-verified hide-on hide-on--sale-terms-agreed">
+                    <h5 class="text-center">Terms and conditions</h5>
+                    <div class="well terms-and-conditions">
+                        Token Sale Terms & Conditions
+                        Version 1.0
+                        A Decentralised Platform for Rewarding Open Source Contributions using Smart Contracts.
+                        This document is for informational purposes only and does not constitute an offer or
+                        solicitation to
+                        sell shares or securities in
+                        FundRequest or any related or associated company. Any such offer or solicitation would be made
+                        only
+                        by means of a confidential offering memor
+                        andum and in accordance with the terms of all applicable securities and other laws.
+                        The following Terms and Conditions ("Terms") govern the token sale funding of the FundRequest
+                        project. The FundRequest project
+                        ("FundRequest") entails the development of a decentralised platform for rewarding open source
+                        contributions.
+                        The FundRequest Platform ("the Platform") is being developed by a volunteer contributor team
+                        ("FundRequest Team"), and will continue to be
+                        developed by volunteer developers as well as under a more formalised contracting or employment
+                        relationship for other developers.
+                        This document is not a solicitation for investment and does not pertain in any way to an
+                        offering of
+                        securities in any jurisdiction. Throughout this
+                        document, the terms "Donor" and "Participant" will be used interchangeably to designate parties
+                        partaking in the token sale. Participation in the to
+                        ken sale does not constitute the acquisition of a security or equity stake in this project, or
+                        in
+                        any organization that may be associated with
+                        FundRequest.
+                        Table of Contents
+                        1 Obligation to Determine If Donator Can Participate in the Token Sale or Purchase FND in
+                        Donor's
+                        Jurisdiction
+                        2 Acceptance of Terms and Conditions of the FND token sale
+                        3 Independent Confirmation of Donation
+                        4 Loss of the Donation Password Will Cause the Loss of the right to receive FND
+                        5 Donations will only be accepted by the FundRequest Website
+                        6 Fraudulent Attempts to Double Spend ETH
+                        7 Certain Risks Associated with the Donation to FundRequest in order to receive FND
+                        7.1 Risk of Dissolution of The FundRequest Project Due To a Diminishment in the Value of the ETH
+                        Sale Revenue
+                        7.2 Risk of Losing Access to FND Due to Loss of a Wallet File or Password
+                        7.3 Risk of Unauthorised Access to a Wallet
+                        7.4 Risk of Regulatory Action in One or More Jurisdictions
+                        7.5 Risk of Insufficient Interest in the FundRequest Platform
+                        7.6 Risk Associated With the Development of Other Platforms like FundRequest
+                        7.7 Risk that the FundRequest Platform, As Developed, Will Not Meet the Expectations of Donor
+                        7.8 Risk that the FundRequest Platform May Never be Completed or Released
+                        7.9 Risk of Theft
+                        7.10 Risk of Security Weaknesses in the FundRequest Platform Software
+                        7.11 Risk of Weaknesses or Exploitable Breakthroughs in the Field of Cryptography
+                        7.12 Risk of Ether Mining Attacks
+                        7.13 Risk of Rapid Adoption and Insufficiency of Computational Application Processing Power on
+                        the
+                        FundRequest Network
+                        8 All Donations during the token sale and the Purchases of FundRequest tokens (FND) Are
+                        Non-Refundable
+                        9 Taxation of FND token and Taxation Related to the FundRequest Token Sale
+                        10 Privacy
+                        11 Disclaimer of Warranties
+                        12 Limitations Waiver of Liability
+                        13 Jurisdiction of the token sale event
+                        14 Dispute Resolution
+                        15 Force Majeure
+                        16 Complete Agreement
+                        17 Severability
+                        18 Waiver of liability of the FundRequest team
+                        19 No Waiver
+                        20 Updates to the Terms and Conditions of the FundRequest Token Sale
+                        21 Cooperation with Legal Authorities
+                        22 Conflicting terms and conditions with applicable legislation
+                        23 Further Information
+                        The FND token
+                        FND tokens are cryptographic tokens created by FundRequest only upon successful completion of
+                        the
+                        token sale. The token sale is successful
+                        when the minimum cap ("Minimum Cap") is reached at the end of the token sale. The "Minimum Cap"
+                        is
+                        set at 2 million USD in Ethereum token
+                        equivalent measured at the end of the token sale. Donations received during the private seed,
+                        and
+                        the public seed, and the strategic advisor
+                        presale will be taken into account towards this Minimum Cap. Following their creation, FND
+                        tokens
+                        are transferred to Donors as an expression of
+                        appreciation and gratitude and an acknowledgement of their support. FundRequest is not
+                        accountable
+                        should any Donor or Third Party attach
+                        (monetary) value to the FND token.
+                        The ownership of FND Tokens is a reward based return and not intended to be any form of loan
+                        based
+                        return. The digital token known as FND is
+                        only useful for identifying your contribution to the crowdsale. This document describes the
+                        FundRequest token sale. Parties may be interested in
+                        donating funds in the token sale of FundRequest to support the development of the FundRequest
+                        Platform. Individuals, businesses, and other
+                        organisations should carefully weigh the risks, costs, and benefits of donating funds to the
+                        FundRequest project.
+                        IMPORTANT
+                        Donations to the FundRequest project carry no rights expressed or implied. Donations to the
+                        FundRequest project are non-refundable.
+                        Donors should have no expectation of influence over governance of the platform.
+                        By participating in the token sale, you acknowledge and represent that you have carefully
+                        reviewed
+                        the Terms and fully understand the risks,
+                        costs, and benefits of participating and agree to be bound by these Terms. As set forth further
+                        below, you further represent and warrant that, to
+                        the extent permitted by law, you are authorised to participate in the token sale in your
+                        relevant
+                        jurisdiction, are of a legal age to be bound by these
+                        Terms, and will not hold FundRequest, its parents and affiliates, and the officers, directors,
+                        agents, joint ventures, owners, founders, employees,
+                        developers, volunteers and/or suppliers of FundRequest or our parents or affiliates, now or in
+                        the
+                        future and any other member of the
+                        FundRequest Team (collectively all people who contribute to the FundRequest platform) liable for
+                        any
+                        losses or any special, incidental, or
+                        consequential damages arising out of, or in any way connected to the token sale of FND.
+                        WARNING: DO NOT PARTICIPATE IN THE TOKEN SALE IF YOU ARE NOT AN EXPERT IN DEALING WITH
+                        CRYPTOGRAPHIC
+                        TOKENS
+                        AND BLOCKCHAIN-BASED SOFTWARE SYSTEMS
+                        Participation in the token sale should be undertaken only by individuals, entities, or companies
+                        that have significant experience with, and
+                        understanding of, the usage and intricacies of cryptographic tokens, such as, but not limited to
+                        bitcoin (BTC), and blockchain-based software
+                        systems.
+                        While the FundRequest Team will provide general guidelines for user usage and storage of FND
+                        before
+                        the FundRequest Platform becomes
+                        operational, Donors should have functional understanding of storage and transmission mechanisms
+                        associated with other cryptographic tokens.
+                        While the FundRequest Team will be available to assist Donors to FundRequest during and after
+                        the
+                        token sale, FundRequest will not be
+                        responsible for lost ETH or FND resulting from actions taken by, or omitted by Donors. Note, in
+                        particular, that FundRequest Donors should take
+                        great care to store their wallet password safely to retain access to their FND tokens.
+                        If you do not have such experience or expertise, then you should not participate in the FND
+                        token
+                        sale.
+                        WARNING: CRYPTOGRAPHIC TOKENS OF VALUE MAY EXPERIENCE EXTREME VOLATILITY IN PRICING
+                        Cryptographic tokens that possess value on public exchanges, such as BTC, have demonstrated
+                        extreme
+                        fluctuations in price over short periods
+                        of time on a regular basis. If the FND token would be listed on exchanges in the future, then
+                        FND
+                        Donors should be prepared to expect similar
+                        fluctuations, both down and up, in the price of FND denominated in either another cryptocurrency
+                        or
+                        United States Dollars ("USD") or other fiat
+                        money of other jurisdictions. Such fluctuations are due to market forces and represent changes
+                        in
+                        the balance of supply and demand.
+                        FundRequest cannot and does not guarantee market liquidity for FND and therefore there may be
+                        periods of time in which FND is difficult to buy
+                        and/or sell. Additionally, due to different regulatory dictates in different jurisdictions and
+                        the
+                        inability of citizens of certain countries to open
+                        accounts at exchanges located anywhere in the world, the liquidity of FND may be markedly
+                        different
+                        in various countries and this would likely be
+                        reflected in significant price discrepancies.
+                        By participating in the token sale, you expressly acknowledge and represent that you fully
+                        understand that FND may experience volatility in pricing
+                        and will not seek to hold any of the FundRequest Parties liable for any losses or any special,
+                        incidental, or consequential damages arising from, or
+                        in any way connected to the token sale of FND.
+                        WARNING: THE PARTICIPATION IN THE TOKEN SALE OF FND HAS A NUMBER OF RISKS
+                        Donation to FundRequest in order to receive FND carries with it a number of risks. Prior to
+                        donating, you should carefully consider the risks listed
+                        below and, to the extent necessary, consult an appropriate lawyer, accountant, or tax
+                        professional.
+                        If any of the following risks are unacceptable
+                        to you, you should not participate in the token sale nor purchase FND. By participating in the
+                        token
+                        sale or purchasing FND, and to the extent
+                        permitted by law, you are agreeing not to hold any of the FundRequest Parties liable for any
+                        losses
+                        or any special, incidental, or consequential
+                        damages arising from, or in any way connected, to the token sale, including losses associated
+                        with
+                        the risks set forth below.
+                        Obligation to Determine If Donator Can Participate in the Token Sale or
+                        Purchase FND in Donor's Jurisdiction
+                        The FundRequest token sale constitutes the donation of Ether to FundRequest under Estonian law.
+                        This
+                        token sale is conducted by
+                        FundRequest OÜ, an Estonian organisation, operating under Estonian law. It is the responsibility
+                        of
+                        each potential Donor to FundRequest to
+                        determine if the Donor can legally partake in the token sale and/or purchase FND in the
+                        Donator's
+                        jurisdiction.
+                        The FundRequest token sale is an offer made by FundRequest OÜ in Estonia, Belgium and France (to
+                        be
+                        extended when legal analysis for other
+                        countries are ready) for residents of these counries. Residents of other countries can only
+                        partake
+                        if, by law, the can partake to such an offer in Es
+                        tonia, Belgium and France (to be extended when legal analysis for other countries are ready).
+                        Acceptance of Terms and Conditions of the FND token sale
+                        As a first step in the donation process, FundRequest will present the Donor with the Terms &
+                        Conditions of the Token Sale Terms & Condidtions,
+                        and any other associated documents, along with a checkbox. By clicking the checkbox, the Donor:
+                        (i)
+                        consents and agrees to the Terms &
+                        Conditions; (ii) represents and warrants that the Donor is legally permitted to partake in the
+                        token
+                        sale and/or purchase FND in the Donor's
+                        jurisdiction and is legally permitted to receive products of Estonian origin (iii) represents
+                        and
+                        warrants that the Donor is of a legal age to donate to
+                        FundRequest or has received permission from a legal guardian who has reviewed and agreed to
+                        these
+                        Terms; (iv) represents and warrants that
+                        the the Donor will take sole responsibility for any restrictions and risks associated with the
+                        donation to FundRequest as set forth below; (v)
+                        represents and warrants that Donor is not exchanging Ether (ETH) for FND for the purpose of
+                        speculative investment; (vi) represents and
+                        warrants that the Donor is donating to support the development of a platform for supporting open
+                        source contributions, or to facilitate
+                        development, testing, deployment and operation of decentralised applications on the Ethereum
+                        Platform; and (vii) represents and warrants that
+                        the Donor has an understanding of the usage and intricacies of cryptographic tokens, for
+                        instance
+                        BTC, and blockchain-based software systems.
+                        Independent Confirmation of Donation
+                        During the donation process on the https://www.fundrequest.io website, FundRequest will provide
+                        Donors with a unique intermediary ETH
+                        address. Using this address, Donors can track and confirm that the donated ETH have been
+                        received at
+                        that address.
+                        Knowledge of the unique intermediary ETH address does not constitute a purchase receipt or
+                        indicate
+                        in any way that any party possessing such
+                        knowledge has rights to or ownership of the granted FND.
+                        Loss of the Donation Password Will Cause the Loss of the right to receive FND
+                        As part of the donation process, and in order to receive FND, the Donor will need to provide an
+                        ETH
+                        address ("Donor ETH address"). Failing to do
+                        so will result in the inability to donate to the FundRequest project. Upon succesful completion
+                        of
+                        the token sale, and only then, will FundRequest
+                        transfer the granted FND tokens to the Donor ETH Address. The token sale is succesful when the
+                        Minimum Cap is reached.
+                        Donor must keep the Donation ETH address Password safe and not share it in any way or with
+                        anybody.
+                        The Donator ETH address Password is
+                        essential for accessing the Donor's FND. Donor's loss of the Donation ETH address Password will
+                        cause the loss of the aquired FND.
+                        Unauthorised access by any party to a Donor's ETH address Password along with access to the
+                        Ethereum
+                        wallet, will enable that unauthorised
+                        party to access the received FND and the FND will be lost.
+                        Donor must keep the Donation ETH address Password safe and not share it in any way or with
+                        anybody.
+                        The Donator ETH address Password is
+                        essential for accessing the Donor's FND. Donor's loss of the Donation ETH address Password will
+                        cause the loss of the aquired FND.
+                        Unauthorised access by any party to a Donor's ETH address Password along with access to the
+                        Ethereum
+                        wallet, will enable that unauthorised
+                        party to access the received FND and the FND will be lost.
+                        By partaking in the token sale or by purchasing FND, and to the extent permitted by applicable
+                        law,
+                        the Donor agrees not to hold any of the
+                        FundRequest Parties liable for any losses or any special, incidental, or consequential damages
+                        arising out of, or in any way connected to, Donor's
+                        failure to properly secure and keep private the Donor's ETH address Password and/or the Donor's
+                        Ethereum wallet.
+                        Donations will only be accepted by the FundRequest Website
+                        FundRequest will only accept donations through the FundRequest website, available at
+                        https://www.fundrequest.io. To the extent that any
+                        third-party website or service offers FND for sale during the FundRequest token sale or
+                        facilitates
+                        the sale or transfer of FND in any way during
+                        the FundRequest token sale, such third-party websites or services are not sanctioned by
+                        FundRequest
+                        or its parents and affiliates and have no
+                        relationship in any way with the FundRequest Parties. As a result, FundRequest prohibits the use
+                        of
+                        these third-party websites or services for the
+                        purchase of FND.
+                        Donors should take great care to ensure that the URL of their web browser indicates that it is
+                        using
+                        a hypertext transport protocol secure
+                        connection ("https") and that the domain name is correct.
+                        By partaking in the token sale or by purchasing FND, and to the extent permitted by applicable
+                        law,
+                        the Donor agrees not to hold any of the
+                        FundRequest Parties liable for losses incurred by any person, entity, corporation, or group
+                        individuals or groups who uses a third party service to
+                        purchase FND.
+                        The only official and authorised FND donation website URL is https://www.fundrequest.io
+                        Fraudulent Attempts to Double Spend ETH
+                        FundRequest will monitor all potential transactions for fraudulent attempts to double spend ETH.
+                        Any
+                        detected double spend of ETH will result in
+                        no FND being transferred to the associated wallet address.
+                        Certain Risks Associated with the Donation to FundRequest in order to receive
+                        FND
+                        Donating to FundRequest in order to receive FND tokens carries with it significant risk. Prior
+                        to
+                        partaking in the token sale or by purchasing FND,
+                        the Donor should carefully consider the below risks and, to the extent necessary, consult a
+                        lawyer,
+                        accountant, and/or tax professional prior to
+                        determine whether to partake in the token sale or the purchase of FND.
+                        Risk of Dissolution of The FundRequest Project Due To a Diminishment in the Value of
+                        the ETH Sale Revenue
+                        All Donors are donating ETH to support the FundRequest project. In the past few months the price
+                        of
+                        ETH in USD and EUR has been relatively
+                        stable. However, despite recent price stability, it is possible that the value of ETH will drop
+                        significantly in the future, depriving FundRequest of
+                        sufficient resources to continue to operate. In order to guard against this risk, FundRequest
+                        intends to periodically convert proceeds from the toke
+                        n sale of FND into fiat currencies or other cryptocoins instead of ETH. In order to cover the
+                        initial startup costs, FundRequest will convert 175.000
+                        USD worth of Ether to fiat after a successful token sale.
+                        Risk of Losing Access to FND Due to Loss of a Wallet File or Password
+                        As noted above, FND will be stored in a wallet, which can only be accessed with a password
+                        selected
+                        by the Donor. If a Donor of FND does not
+                        maintain an accurate record of the Donor's password or loses the wallet, this will lead to the
+                        loss
+                        of FND.
+                        As a result, Donor must safely store their password and the wallet in one or more backup
+                        locations
+                        that are well separated from the primary
+                        location. Additionally the password and the wallet should never be stored together.
+                        In order to access one's FND, both the wallet and the password that the Donor entered are
+                        required;
+                        loss of either, or leakage/theft of both, will
+                        lead to the loss of a Donor's FND.
+                        Risk of Unauthorised Access to a Wallet
+                        Any third party that gains access to the Donor's Ethereum wallet and potentially access the
+                        wallet
+                        by deciphering or cracking the Donor's
+                        password. To guard against any improper access to the wallet, the Donor should select a highly
+                        secure Donation Password for the Donation
+                        wallet. Donor must take care not to respond to any inquiry regarding their donation to
+                        FundRequest,
+                        including but not limited to, email requests
+                        purportedly coming from the fundrequest.io or similar looking domain.
+                        Risk of Regulatory Action in One or More Jurisdictions
+                        Cryptocurrencies have been the subject of regulatory scrutiny by various regulatory bodies
+                        around
+                        the globe. The FundRequest Platform and
+                        FND could be impacted by one or more regulatory inquiries or regulatory action, which could
+                        impede
+                        or limit the ability of the FundRequest Team
+                        to continue to develop the FundRequest Platform.
+                        Risk of Insufficient Interest in the FundRequest Platform
+                        It is possible that the FundRequest Platform will not be used by a large number of external
+                        businesses, individuals, and other organisations and
+                        that there will be limited public interest in supporting the open source community via our
+                        platform.
+                        Such a lack of interest could impact the
+                        development of the FundRequest Platform. FundRequest has contracted with developers to help
+                        build
+                        the FundRequest Platform and is working
+                        with other third-party developers around the world to create an interest in the FundRequest
+                        Platform. However, it cannot predict the success of its
+                        own development efforts or the efforts of third parties.
+                        Risk Associated With the Development of Other Platforms like FundRequest
+                        FundRequest is one of a few organisations, companies, and groups, attempting to build a platform
+                        for
+                        rewarding open source contributions. It is
+                        possible that different technical paradigms than the ones being used in the current FundRequest
+                        Platform implementation are optimal.
+                        While FundRequest anticipates being a leader in the development of such a platform, competition
+                        from
+                        these alternative platforms may impact
+                        success of the FundRequest Project and the ability of FundRequest to operate.
+                        Risk that the FundRequest Platform, As Developed, Will Not Meet the Expectations of Don
+                        or
+                        The Donor recognises that the FundRequest Platform is presently under development and may
+                        undergo
+                        significant changes before release. Dono
+                        r acknowledges that any expectations regarding the form and functionality of the FundRequest
+                        Platform held by the Donor may not be met upon
+                        release of the FundRequest Platform, for any number of reasons including a change in the design
+                        and
+                        implementation plans and execution of the
+                        implementation of the FundRequest Platform.
+                        Risk that the FundRequest Platform May Never be Completed or Released
+                        Donor understands, that while the FundRequest Team will make reasonable efforts to complete the
+                        FundRequest software, it is possible that an
+                        official completed version of the FundRequest Platform may not be released and there may never
+                        be an
+                        operational FundRequest Platform.
+                        Risk of Theft
+                        Hackers or other groups or organisations may attempt to steal the ETH revenue from the
+                        FundRequest
+                        private seed, public seed and/or token
+                        sale, thus potentially impacting the ability of FundRequest to develop the FundRequest Platform
+                        and
+                        operate FundRequest. To account for this
+                        risk, FundRequest has and will continue to implement comprehensive security precautions to
+                        safeguard
+                        the ETH obtained from the private seed,
+                        public seed and/or token sale of FND.
+                        Risk of Security Weaknesses in the FundRequest Platform Software
+                        The FundRequest Platform rests on open source software, and there is a risk that the FundRequest
+                        Team, or other third parties not directly
+                        affiliated with the FundRequest Parties, may introduce weaknesses or bugs into the core
+                        infrastructural elements of the FundRequest Platform
+                        causing the system to lose ETH or FND stored in one or more Donor accounts or other accounts or
+                        lose
+                        sums of other valued tokens issued on
+                        the FundRequest Platform.
+                        FundRequest has taken steps to build, maintain, and secure the infrastructure of the FundRequest
+                        Platform, and will continue to do so after the
+                        FundRequest private seed, public seed and token sale.
+                        Risk of Weaknesses or Exploitable Breakthroughs in the Field of Cryptography
+                        Advances in code cracking, or technical advances such as the development of quantum computers,
+                        could
+                        present risks to cryptocurrencies and
+                        the FundRequest Platform, which could result in the theft or loss of ETH or FND. To the extent
+                        possible, FundRequest intends to update the
+                        protocol underlying the FundRequest Platform to account for any advances in cryptography and to
+                        incorporate additional security measures, but
+                        cannot predict the future of cryptography or the success of any future security updates.
+                        Risk of Ether Mining Attacks
+                        As with other cryptocurrencies, the blockchain used for the FundRequest Platform, Ethereum is
+                        susceptible to mining attacks, including but not
+                        limited to double-spend attacks, majority mining power attacks, "selfish-mining" attacks, and
+                        race
+                        condition attacks. Any successful attacks
+                        present a risk to the FundRequest Platform, expected proper execution and sequencing of ETH
+                        transactions, and expected proper execution and
+                        sequencing of contract computations. Despite the efforts of the Ethereum community, known or
+                        novel
+                        mining attacks may be successful.
+                        Risk of Rapid Adoption and Insufficiency of Computational Application Processing Power
+                        on the FundRequest Network
+                        If the FundRequest Platform is rapidly adopted, the demand for transaction processing could rise
+                        dramatically and at a pace that exceeds the
+                        supporting rate. Under such a scenario, the entire FundRequest Platform could become
+                        destabilised
+                        causing time-outs and delays in the
+                        transactions.
+                        All Donations during the token sale and the Purchases of FundRequest tokens
+                        (FND) Are Non-Refundable
+                        ALL DONATIONS ARE FINAL AND NON REFUNDABLE. ALL PURCHASES OF FND TOKENS ARE FINAL. PURCHASES OF
+                        FND
+                        ARE
+                        NON-REFUNDABLE. BY PARTAKING IN THE TOKE SALE AND/OR PURCHASING FND, THE DONOR ACKNOWLEDGES THAT
+                        NEITHER
+                        FUNDREQUEST NOR ANY OTHER OF THE FUNDREQUEST PARTIES ARE REQUIRED TO PROVIDE A REFUND FOR ANY
+                        REASON, AND
+                        THAT THE DONOR AND/OR PURCHASER WILL NOT RECEIVE MONEY OR OTHER COMPENSATION FOR ANY FND. ONCE
+                        THE
+                        DONOR
+                        RECEIVES HIS OR HER TOKENS AFTER THE TOKEN SALE, THEY ARE FREE TO SEND OR SELL THEM TO ANYONE OF
+                        THEIR CHOICE.
+                        Taxation of FND token and Taxation Related to the FundRequest Token Sale
+                        FundRequest makes no representations concerning the tax implications of the donations to
+                        FundRequest
+                        or the sale of FND or the possession or
+                        use of FND. The Donor bears the sole responsibility to determine if the donation to FundRequest
+                        and/or the purchase of FND with ETH or the
+                        potential appreciation or depreciation in the value of FND over time has tax implications for
+                        the
+                        Donor in the Donor's home jurisdiction.
+                        By donating to FundRequest or purchasing FND, and to the extent permitted by law, the Donor
+                        agrees
+                        not hold any of the FundRequest Parties
+                        liable for any tax liability associated with or arising from the donation to FundRequest or the
+                        purchase of FND.
+                        Privacy
+                        Although FundRequest requires that Donors provide an Ethereum address and KYC information,
+                        FundRequest will not publish any identifying
+                        information related to a FundRequest donation or a FND purchase without the prior written
+                        consent of
+                        the Donor. Donors may be contacted by
+                        email by FundRequest regarding a donation or a purchase. Such emails will be informational only.
+                        FundRequest will not request any personal
+                        information from Donors in an email.
+                        Disclaimer of Warranties
+                        THE DONOR EXPRESSLY AGREES THAT THE DONOR IS DONATING TO FUNDREQUEST AT THE DONOR SOLE RISK AND
+                        THAT
+                        FND IS
+                        PROVIDED ON AN "AS IS" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+                        INCLUDING,
+                        BUT NOT LIMITED
+                        TO, WARRANTIES OF TITLE OR IMPLIED WARRANTIES, MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+                        PURPOSE
+                        (EXCEPT
+                        ONLY TO THE EXTENT PROHIBITED UNDER APPLICABLE LAW WITH ANY LEGALLY REQUIRED WARRANTY PERIOD TO
+                        THE
+                        SHORTER OF THIRTY DAYS FROM FIRST USE OR THE MINIMUM PERIOD REQUIRED).
+                        WITHOUT LIMITING THE FOREGOING, NONE OF THE FUNDREQUEST PARTIES WARRANT THAT THE PROCESS FOR
+                        DONATING TO
+                        FUNDREQUEST OR PURCHASING FND WILL BE UNINTERRUPTED OR ERROR-FREE.
+                        Limitations Waiver of Liability
+                        THE DONOR ACKNOWLEDGES AND AGREES THAT, TO THE FULLEST EXTENT PERMITTED BY ANY APPLICABLE LAW,
+                        THE
+                        DISCLAIMERS OF LIABILITY CONTAINED HEREIN APPLY TO ANY AND ALL DAMAGES OR INJURY WHATSOEVER
+                        CAUSED
+                        BY OR
+                        RELATED TO USE OF, OR INABILITY TO USE, FND OR THE FUNDREQUEST PLATFORM UNDER ANY CAUSE OR
+                        ACTION
+                        WHATSOEVER OF ANY KIND IN ANY JURISDICTION, INCLUDING, WITHOUT LIMITATION, ACTIONS FOR BREACH OF
+                        WARRANTY,
+                        BREACH OF CONTRACT OR TORT (INCLUDING NEGLIGENCE) AND THAT NONE OF THE FUNDREQUEST PARTIES SHALL
+                        BE
+                        LIABLE
+                        FOR ANY INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY OR CONSEQUENTIAL DAMAGES, INCLUDING FOR LOSS OF
+                        PROFITS,
+                        GOODWILL OR DATA, IN ANY WAY WHATSOEVER ARISING OUT OF THE USE OF, OR INABILITY TO USE, OR
+                        PURCHASE
+                        OF, OR
+                        INABILITY TO PURCHASE, FND OR DONATE TO FUNDREQUEST.
+                        THE DONOR FURTHER SPECIFICALLY ACKNOWLEDGES THAT FUNDREQUEST PARTIES ARE NOT LIABLE, AND THE
+                        DONOR
+                        AGREES
+                        NOT TO SEEK TO HOLD ANY OF THE FUNDREQUEST PARTIES LIABLE, FOR THE CONDUCT OF THIRD PARTIES,
+                        INCLUDING
+                        OTHER DONORS OF FUNDREQUEST, AND THAT THE RISK OF DONOR AND PURCHASING AND USING FND RESTS
+                        ENTIRELY
+                        WITH
+                        THE DONOR .
+                        TO THE EXTENT PERMISSIBLE UNDER APPLICABLE LAWS, UNDER NO CIRCUMSTANCES WILL ANY OF THE
+                        FUNDREQUEST
+                        PARTIES
+                        BE LIABLE TO ANY DONOR FOR MORE THAN THE AMOUNT THE DONOR HAS DONATED OR PAID TO FUNDREQUEST FOR
+                        THE
+                        PURCHASE OF FND.
+                        SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN WARRANTIES OR THE LIMITATION OR
+                        EXCLUSION
+                        OF
+                        LIABILITY FOR CERTAIN TYPES OF DAMAGES. THEREFORE, SOME OF THE ABOVE LIMITATIONS IN THIS SECTION
+                        AND
+                        ELSEWHERE
+                        IN THE TERMS MAY NOT APPLY TO A DONOR. IN PARTICULAR, NOTHING IN THESE TERMS SHALL AFFECT THE
+                        STATUTORY RIGHTS
+                        OF ANY DONOR OR EXCLUDE INJURY ARISING FROM ANY WILFUL MISCONDUCT OR FRAUD OF FUNDREQUEST.
+                        Jurisdiction of the token sale event
+                        The legal entity conducting the FundRequest token sale, FundRequest OÜ, falls under Estonian
+                        law.
+                        FundRequest OÜ
+                        Pärnu maantee 15
+                        10141 Tallinn
+                        Estonia
+                        Registration number: 14354397
+                        Dispute Resolution
+                        All disputes, controversies or claims arising out of, relating to, or in connection with the
+                        Terms,
+                        the breach thereof, or FundRequest's token sale of
+                        FND or use of the FundRequest Platform shall be finally settled under the Rules of Arbitration
+                        of
+                        the International Chamber of Commerce by one
+                        or more arbitrators appointed in accordance with said Rules. All claims between the parties
+                        relating
+                        to these Terms that are capable of being
+                        resolved by arbitration, whether sounding in contract, tort, or otherwise, shall be submitted to
+                        ICC
+                        arbitration.
+                        Prior to commencing arbitration, the parties have a duty to negotiate in good faith and attempt
+                        to
+                        resolve their dispute in a manner other than by
+                        submission to ICC arbitration.
+                        The arbitration panel shall consist of one arbitrator only, unless the ICC Court of Arbitration
+                        determines that the dispute is such as to warrant three
+                        arbitrators. If the Court determines that one arbitrator is sufficient, then such arbitrator
+                        shall
+                        be selected from Belgium. If the Court determines that
+                        three arbitrators are necessary, then each party shall have 30 days to nominate an arbitrator of
+                        its
+                        choice — in the case of the Claimant,
+                        measured from receipt of notification of the ICC Court's decision to have three arbitrators; in
+                        the
+                        case of Respondent, measured from receipt of
+                        notification of Claimant's nomination. All nominations must be from Belgium. If a party fails to
+                        nominate an arbitrator, the Court will do so. The
+                        Court shall also appoint the chairman.
+                        All arbitrators shall be and remain "independent" of the parties involved in the arbitration.
+                        The
+                        place of arbitration shall be fixed by the ICC Court,
+                        but the arbitral tribunal may conduct hearings, meetings, and deliberations at any location it
+                        considers appropriate. The language of the arbitration
+                        shall be English. In deciding the merits of the dispute, the tribunal shall apply the laws of
+                        Belgium and any discovery shall be limited and shall not
+                        involve any depositions or any other examinations outside of a formal hearing. The tribunal
+                        shall
+                        not assume the powers of amiable compositor or
+                        decide the case ex aequo et bono.
+                        In the final award, the tribunal shall fix the costs of the arbitration and decide which of the
+                        parties shall bear such costs in what proportion. Every
+                        award shall be binding on the parties. The parties undertake to carry out the award without
+                        delay
+                        and waive their right to any form of recourse
+                        against the award in so far as such waiver can validly be made.
+                        Force Majeure
+                        FundRequest is not liable for failure to perform solely caused by:
+                        unavoidable casualty, delays in delivery of materials, embargoes, government orders, acts of
+                        civil
+                        or military authorities, acts by common carriers,
+                        emergency conditions (including weather conditions) incompatible with safety or good quality
+                        workmanship, or any similar unforeseen event that
+                        renders performance commercially implausible. If an event of force majeure occurs, the party
+                        injured
+                        by the other's inability to perform may elect
+                        to suspend the Agreement, in whole or part, for the duration of the force majeure circumstances.
+                        The
+                        party experiencing the force majeure
+                        circumstances shall cooperate with and assist the injured party in all reasonable ways to
+                        minimise
+                        the impact of force majeure on the injured
+                        party.
+                        Complete Agreement
+                        These Terms sets forth the entire understanding between each Donor and FundRequest with respect
+                        to
+                        the donation to FundRequest.
+                        For facts relating to the token sale the Donor agrees to rely only on this document in
+                        determining
+                        donation decisions and understands that this
+                        document governs the donation to FundRequest and supersede any public statements about the
+                        FundRequest token sale made by third parties
+                        or by FundRequest Team or individuals associated with any FundRequest Parties, past and present
+                        and
+                        during the FundRequest private seed,
+                        public seed, and token sale.
+                        Severability
+                        The Donor and FundRequest agree that if any portion of these Terms is found illegal or
+                        unenforceable, in whole or in part, the Terms will be
+                        ineffective solely to the extent of such determination of invalidity without affecting the
+                        validity
+                        or enforceability thereof in any other manner or
+                        jurisdiction and without affecting the remaining provisions of the Terms, which shall continue
+                        to be
+                        in full force and effect.
+                        Waiver of liability of the FundRequest team
+                        The founders, members and employees of FundRequest have no personal liability for any harm or
+                        loss
+                        to a Donor caused by partaking in the
+                        private seed, public seed and/or token sale.
+                        No Waiver
+                        The failure of FundRequest to require or enforce strict performance by the Donor of any
+                        provision of
+                        these Terms or FundRequest's failure to
+                        exercise any right under these agreements shall not be construed as a waiver or relinquishment
+                        of
+                        FundRequest's right to assert or rely upon any
+                        such provision or right in that or any other instance.
+                        The express waiver by FundRequest of any provision, condition, or requirement of these Terms
+                        shall
+                        not constitute a waiver of any future
+                        obligation to comply with such provision, condition or requirement.
+                        Except as expressly and specifically set forth in this these Terms, no representations,
+                        statements,
+                        consents, waivers, or other acts or omissions
+                        by FundRequest shall be deemed a modification of these Terms nor be legally binding, unless
+                        documented in physical writing, hand signed by
+                        the Donor and a duly appointed officer, employee, or agent of FundRequest.
+                        Updates to the Terms and Conditions of the FundRequest Token Sale
+                        FundRequest reserves the right, at its sole discretion, to change, modify, add, or remove
+                        portions
+                        of the Terms & Conditions at any time during
+                        the token sale by posting the amended Terms & Conditions on the FundRequest website
+                        (https://www.fundrequest.io). Any Donor will be deemed
+                        to have accepted such changes by donating to FundRequest.
+                        The Terms may not be otherwise amended except in a signed writing executed by both the Donor and
+                        FundRequest. For purposes of this
+                        agreement, "writing" does not include an e-mail message and a signature does not include an
+                        electronic signature.
+                        If at any point you do not agree to any portion of the then-current version of the Terms, you
+                        should
+                        not donate to FundRequest nor purchase FND.
+                        To the extent the Terms conflict with the FND Disclaimer, the Terms shall govern.
+                        Cooperation with Legal Authorities
+                        FundRequest will cooperate with all law enforcement inquiries, subpoenas, or requests provided
+                        they
+                        are fully supported and documented by the
+                        law in the relevant jurisdictions. In accord with one of the core principles of the FundRequest
+                        project — transparency — FundRequest will
+                        endeavour to publish any legal inquiries upon receipt.
+                        Conflicting terms and conditions with applicable legislation
+                        If one of the terms and conditions would be in conflict with the applicable legislation only the
+                        conflicting term and/or condition is nullified but the
+                        other terms and conditions remain applicable.
+                        Further Information
+                        For further information regarding the FundRequest token sale, please contact
+                        info@fundrequest.io.
+                    </div>
+                    <div class="text-center">
+                        <p>
+                            <input data-checkbox-toggle-class="sale-terms-agreed" type="checkbox"
+                                   value="terms-and-conditions"/>
+                            I have read and agree to the
+                            <a href="assets/Terms-Conditions.pdf" target="_blank">terms and conditions</a>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-center show-on show-on--sale-terms-agreed">
+                    <small>
+                        Note: by participating in our token sale you agree with our
+                        <a href="assets/Terms-Conditions.pdf" target="_blank">terms and conditions</a>.
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% include footer.html %}
 </body>
 </html>
