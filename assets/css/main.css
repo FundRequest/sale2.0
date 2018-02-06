@@ -15,15 +15,6 @@ a.button:hover { color: #FFF; text-decoration: none; font-weight: 700;}
 section.header img.rect { position: absolute; right: 0; bottom: 0; width: auto; }
 .center { text-align: center; }
 .nav>li>a:focus, .nav>li>a:hover { background-color: transparent !important; }
-/*Sections*/
-section { padding: 290px 0; position: relative; }
-section.header, section.footer { background-image: url('../img/bg-blue.png'); background-size: 100%; background-repeat: repeat-y; }
-section.steps, section.team { background-color: #f4f9fb; }
-section .triangle-top { width: 100%; position: absolute; top: 0; }
-section .triangle-top img { width: 100%; }
-section .triangle-bottom { width: 100%; position: absolute; bottom: 0; }
-section .triangle-bottom img { width: 100%; }
-section.roadmap .triangle-bottom, section.partners .triangle-bottom { top: -170px; }
 
 /*nav -> headroom */
 nav.headroom--unpinned { display: none; -webkit-transition: all .35s ease-in-out; transition: all .35s ease-in-out; }
