@@ -110,7 +110,7 @@ $(function() {
 
         if (ethAddress !== null && ethAddress.length >= 0) {
             if (status === 'approve') {
-                statusEl.innerHTML = 'Address <samp class="eth-address">' + ethAddress + '</samp> is whitelisted and KYC approved!';
+                statusEl.innerHTML = 'Your address is whitelisted and KYC approved!';
                 statusEl.classList.add('alert-success');
                 document.body.classList.add('sale-kyc-verified');
             } else {
@@ -150,6 +150,11 @@ $(function() {
         }
     });
 
+  $('#agreed-to-terms').on('click', function(e) {
+      document.body.classList.remove('sale-terms-agreed');
+      document.body.classList.add('sale-terms-agreed');
+  });
+
     $('[data-checkbox-toggle-class]').on('change', function() {
         var className = this.dataset.checkboxToggleClass;
         if (className) {
@@ -158,5 +163,16 @@ $(function() {
                 document.body.classList.add(className);
             }
         }
-    })
+    });
+    $('#btnCopyTokenSaleAddress').on('click', function() {
+      var $btnTokenSale = $('#token-sale-address');
+      $btnTokenSale.removeAttr("disabled");
+      var copyText = document.getElementById("token-sale-address");
+      copyText.select();
+      document.execCommand("Copy");
+      $btnTokenSale.attr("disabled", "disabled")
+
+
+    });
+
 });

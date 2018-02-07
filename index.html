@@ -90,7 +90,7 @@ pagina: Home
             <div class="col-sm-12">
                 <button class="btn btn-warning btn-lg show-on show-on--sale-not-started" disabled>Join Soon</button>
                 <button class="btn btn-warning btn-warning--glow btn-lg show-on show-on--sale-round1"
-                        data-toggle="modal" data-target="#modal-token-sale">
+                        data-toggle="modal" data-target="#modal-token-sale" >
                     Join Token Sale - Round 1
                 </button>
                 <button data-token-sale class="btn btn-warning btn-warning--glow btn-lg show-on show-on--sale-round2"
@@ -119,7 +119,6 @@ pagina: Home
                     <li>Maximum contribution : 1 ETH</li>
                     <li>Gas Limit : 350 000</li>
                 </ul>
-                <button class="btn btn-warning btn-lg show-on show-on--sale-not-started" disabled>Join Soon</button>
 
             </div>
             <div class="col-md-6 blur-on--sale-round1 blur-on--sale-closed">
@@ -306,7 +305,7 @@ pagina: Home
     </div>
 </section>
 
-<div class="modal fade" id="modal-token-sale" tabindex="-1" role="dialog" aria-labelledby="modal-token-sale-labelledby">
+<div class="modal fade" id="modal-token-sale" tabindex="-1" role="dialog" aria-labelledby="modal-token-sale-labelledby"  data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -319,38 +318,7 @@ pagina: Home
                 </h4>
             </div>
             <div class="modal-body">
-                <div class="show-on show-on--sale-terms-agreed">
-                    <div class="show-on show-on--sale-round1">
-                        <span>
-                            The first 24 hours of the token sale will be individually capped with a minimum
-                            and maximum contribution perperson.
-                        </span>
-                        <ul>
-                            <li>Minimum contribution : 0,01 ETH</li>
-                            <li>Maximum contribution : 1 ETH</li>
-                            <li>Gas Limit : TBD</li>
-                        </ul>
-                    </div>
-                    <div class="show-on show-on--sale-round2">
-                        <span>
-                            The individual cap per person is lifted. It is now possible to contribute more than 1 ETH
-                            until the hard cap is reached.
-                        </span>
-                        <ul>
-                            <li>Minimum contribution : 0,01 ETH</li>
-                            <li>Maximum contribution : no limit until hard cap reached</li>
-                            <li>Gas Limit : TBD</li>
-                        </ul>
-                    </div>
-                    <div class="alert alert-info">
-                        <h4 class="text-center">Token Sale Smart Contract Address</h4>
-                        <p class="text-center">
-                            <samp class="eth-address">0x0000000000000000000000000000000000000000</samp>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="hide-on hide-on--sale-kyc-verified">
+                <div class="hide-on hide-on--sale-terms-agreed">
                     <h5 class="text-center">Enter ETH address to verify KYC</h5>
                     <div class="input-group">
                         <span class="input-group-addon">ETH Wallet Address</span>
@@ -360,8 +328,9 @@ pagina: Home
                             <button data-eth-address-check="eth-address-modal" class="btn btn-warning">Check</button>
                         </span>
                     </div>
+                    <p data-kyc-status class="kyc-status-message text-center"></p>
                 </div>
-                <p data-kyc-status class="kyc-status-message text-center"></p>
+
 
                 <div class="show-on show-on--sale-kyc-verified hide-on hide-on--sale-terms-agreed">
                     <h5 class="text-center">Terms and conditions</h5>
@@ -1055,10 +1024,50 @@ pagina: Home
                     </div>
                     <div class="text-center">
                         <p>
-                            <input data-checkbox-toggle-class="sale-terms-agreed" type="checkbox"
-                                   value="terms-and-conditions"/>
-                            I have read and agree to the
-                            <a href="assets/Terms-Conditions.pdf" target="_blank">terms and conditions</a>.
+                            <button class="btn btn-warning" id="agreed-to-terms"
+                                    data-checkbox-toggle-class="sale-terms-agreed">
+                                I have read and agree to the terms and conditions!
+                            </button>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="show-on show-on--sale-terms-agreed">
+
+                    <div class="alert alert-info">
+                        <h4 class="text-center">Token Sale Smart Contract Address</h4>
+                        <p class="text-center">
+
+                        <div class="input-group">
+                            <input id="token-sale-address" class="form-control" type="text" maxlength="42"
+                                   minlength="42" disabled="disabled"
+                                   data-toggle="popover" data-content="Copied!"
+                                   value="0x0000000000000000000000000000000000000000"/>
+                            <span class="input-group-btn">
+                                <button class="btn" type="button" id="btnCopyTokenSaleAddress">
+                                    <img class="clippy" src="assets/img/clippy.svg" width="13" alt="Copy to clipboard">
+                                </button>
+                        </span>
+                        </div>
+
+                        <div class="show-on show-on--sale-round1">
+                            <p></p>
+                            <ul>
+                                <li>Minimum contribution : 0,01 ETH</li>
+                                <li>Maximum contribution : <strong>1 ETH</strong></li>
+                                <li>Gas Limit : TBD</li>
+                            </ul>
+                        </div>
+                        <div class="show-on show-on--sale-round2">
+                            <p></p>
+                            <ul>
+                                <li>Minimum contribution : 0,01 ETH</li>
+                                <li>Maximum contribution : no limit until hard cap reached</li>
+                                <li>Gas Limit : TBD</li>
+                            </ul>
+                        </div>
+
+
                         </p>
                     </div>
                 </div>
