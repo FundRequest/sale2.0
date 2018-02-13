@@ -1,126 +1,139 @@
 @-webkit-keyframes orangePulse {
-    from {
-        background-color: #f0ad4e;
-        -webkit-box-shadow: 0 0 9px #333;
-    }
-    50% {
-        background-color: #f08112;
-        -webkit-box-shadow: 0 0 18px #F08112;
-    }
-    to {
-        background-color: #f0ad4e;
-        -webkit-box-shadow: 0 0 9px #333;
-    }
+  from {
+    background-color: #f0ad4e;
+    -webkit-box-shadow: 0 0 9px #333;
+  }
+  50% {
+    background-color: #f08112;
+    -webkit-box-shadow: 0 0 18px #F08112;
+  }
+  to {
+    background-color: #f0ad4e;
+    -webkit-box-shadow: 0 0 9px #333;
+  }
 }
 
 .btn-warning--glow {
-    -webkit-animation-name: orangePulse;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: orangePulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
 }
 
 .clock {
-    color: #fff;
-    list-style: none;
-    padding: 0;
-    display: block;
+  color: #fff;
+  list-style: none;
+  padding: 0;
+  display: block;
 
-    li {
-        display: inline-block;
-        span {
-            min-width: 60px;
-            text-align: center;
-            display: block;
-            font-size: 50px;
-            font-weight: 400;
-            line-height: 50px;
-        }
-
-        &.seperator {
-            font-size: 50px;
-            line-height: 50px;
-            vertical-align: top;
-        }
-
-        p {
-            color: #fff;
-            font-size: 15px;
-            text-align: center;
-        }
-
+  li {
+    display: inline-block;
+    span {
+      min-width: 60px;
+      text-align: center;
+      display: block;
+      font-size: 50px;
+      font-weight: 400;
+      line-height: 50px;
     }
+
+    &.seperator {
+      font-size: 50px;
+      line-height: 50px;
+      vertical-align: top;
+    }
+
+    p {
+      color: #fff;
+      font-size: 15px;
+      text-align: center;
+    }
+
+  }
 }
 
 .clock--header {
-    display: block;
-    color: #40a6da;
-    margin: 0;
-    padding-top: 5px;
+  display: block;
+  color: #40a6da;
+  margin: 0;
+  padding-top: 5px;
 
-    li span {
-        min-width: 30px;
-        font-size: 25px;
-        font-weight: 400;
-        line-height: 25px;
-    }
+  li span {
+    min-width: 30px;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 25px;
+  }
 
-    li.seperator {
-        font-size: 25px;
-        line-height: 25px;
-        vertical-align: baseline;
-    }
+  li.seperator {
+    font-size: 25px;
+    line-height: 25px;
+    vertical-align: baseline;
+  }
 
-    .headroom--top & {
-        display: none;
-    }
+  .headroom--top & {
+    display: none;
+  }
+
 }
 
 /*
  * KYC and terms
  */
 .show-on {
-    display: none;
+  display: none;
 }
 
 .eth-address {
-    font-size: 0.7em;
-    display: block;
+  font-size: 0.7em;
+  display: block;
 }
 
 @media (min-width: 786px) {
-    .eth-address {
-        font-size: 1em;
-    }
+  .eth-address {
+    font-size: 0.8em;
+  }
 }
 
 .kyc-status-message {
-    margin-top: 10px;
+  margin-top: 10px;
+  padding: 0;
+  font-size: 16px;
 }
 
 .terms-and-conditions {
-    overflow-y: scroll;
-    height: 150px;
+  overflow-y: scroll;
+  height: 150px;
+  font-size: 12px;
+}
+
+.label-round-status {
+  font-size: 12px;
+  vertical-align: middle;
 }
 
 @mixin simple-hide-class($name) {
-    .#{$name} .hide-on--#{$name} {
-        display: none !important;
-    }
+  .#{$name} .hide-on--#{$name} {
+    display: none !important;
+  }
+
+  .#{$name} .blur-on--#{$name} {
+    color: darkgray;
+  }
 }
 
 @mixin simple-show-class($name) {
-    .#{$name} .show-on--#{$name} {
-        display: block !important;
-    }
+  .#{$name} .show-on--#{$name} {
+    display: block !important;
+  }
 }
 
 @mixin custom-status-show-class($name) {
-    .#{$name} .show-on--#{$name} {
-        display: inline-block !important;
-        &.section {
-            display: block !important;
-        }
+  .#{$name} .show-on--#{$name} {
+    display: inline-block !important;
+    &.section {
+      display: block !important;
     }
+  }
 }
 
 // Sale show/hide verified and terms

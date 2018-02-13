@@ -49,12 +49,11 @@ pagina: Home
                 <h3 class="show-on show-on--sale-round2">Round 2 closes in:</h3>
                 <div class="show-on show-on--sale-closed">
                     <h3>What now?</h3>
-                    <!--<p>Did you join the token sale? Then check your tokens at <a href="#link-to-token-checker">token-->
-                        <!--checker</a>-->
+                    <p>Did you join the token sale? Then check your tokens at <a target="_blank" href="https://balance.fundrequest.io">balance.fundrequest.io</a>
 
                     <h3>You missed the token sale?</h3>
-                    <p>No worries, check our website to see what's next. <a
-                            href="https://fundrequest.io">FundRequest.io</a></p>
+                    <p>No worries, check our website to see what's next <a
+                            href="https://fundrequest.io">fundrequest.io</a></p>
                 </div>
 
                 <ul class="clock hide-on hide-on--sale-closed">
@@ -89,9 +88,13 @@ pagina: Home
             </div>
             <div class="col-sm-12">
                 <button class="btn btn-warning btn-lg show-on show-on--sale-not-started" disabled>Join Soon</button>
-                <button class="btn btn-warning btn-warning--glow btn-lg show-on show-on--sale-round1 show-on show-on--sale-round2"
+                <button class="btn btn-warning btn-warning--glow btn-lg show-on show-on--sale-round1"
                         data-toggle="modal" data-target="#modal-token-sale">
-                    Join Token Sale
+                    Join Token Sale - Round 1
+                </button>
+                <button data-token-sale class="btn btn-warning btn-warning--glow btn-lg show-on show-on--sale-round2"
+                        data-toggle="modal" data-target="#modal-token-sale">
+                    Join Token Sale - Round 2
                 </button>
             </div>
         </div>
@@ -101,7 +104,7 @@ pagina: Home
 <section class="section section--white section--compact">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 blur-on--sale-round2 blur-on--sale-closed">
                 <h2>
                     Round 1
                     <span class="show-on show-on--sale-round1">- OPEN</span>
@@ -115,16 +118,8 @@ pagina: Home
                     <li>Maximum contribution : 1 ETH</li>
                     <li>Gas Limit : 350 000</li>
                 </ul>
-                <button class="btn btn-warning btn-lg show-on show-on--sale-not-started" disabled>Join Soon</button>
-                <button class="btn btn-warning btn-warning--glow btn-lg show-on show-on--sale-round1"
-                        data-toggle="modal" data-target="#modal-token-sale">
-                    Join Token Sale
-                </button>
-                <button class="btn btn-warning btn-lg show-on show-on--sale-round2 show-on show-on--sale-closed"
-                        disabled>CLOSED
-                </button>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 blur-on--sale-round1 blur-on--sale-closed">
                 <h2>Round 2
                     <span class="show-on show-on--sale-round2">- OPEN</span>
                     <span class="show-on show-on--sale-closed">- CLOSED</span>
@@ -138,15 +133,6 @@ pagina: Home
                     <li>Maximum contribution : no limit until hard cap reached</li>
                     <li>Gas Limit : 350 000</li>
                 </ul>
-
-                <button class="btn btn-warning btn-lg show-on show-on--sale-not-started show-on show-on--sale-round1"
-                        disabled>Join soon
-                </button>
-                <button data-token-sale class="btn btn-warning btn-warning--glow btn-lg show-on show-on--sale-round2"
-                        data-toggle="modal" data-target="#modal-token-sale">
-                    Join Token Sale
-                </button>
-                <button class="btn btn-warning btn-lg show-on show-on--sale-closed" disabled>CLOSED</button>
             </div>
         </div>
         <div class="row"  data-process style="display: none;">
@@ -217,6 +203,15 @@ pagina: Home
                     <span class="description">FundRequest Token Sale</span>
                     <span class="location">https://fundrequest.io</span>
                 </div>
+                <h2>
+                    <small><i class="fas fa-life-ring"></i></small>
+                    <span>Support</span>
+                </h2>
+                <div class="row">
+                    <div class="col-md-10">
+                        <div>If you encounter any problems, please log an issue at <a target="_blank" href="https://support.fundrequest.io">support.fundrequest.io</a> </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -255,7 +250,7 @@ pagina: Home
             <div class="col-xs-12 col-sm-4 col-md-2 col-md-push-1 navlinks">
                 <h2>Resources</h2>
                 <a target="_blank" href="https://fundrequest.io/whitepaper.pdf">Whitepaper</a>
-                <a href="https://docs.fundrequest.io/display/PUB/">Documentation</a>
+                <a target="_blank" href="https://docs.fundrequest.io/display/PUB/">Documentation</a>
                 <a target="_blank" href="https://blog.fundrequest.io/">Blog</a>
             </div>
 
@@ -331,7 +326,8 @@ pagina: Home
     </div>
 </section>
 
-<div class="modal fade" id="modal-token-sale" tabindex="-1" role="dialog" aria-labelledby="modal-token-sale-labelledby">
+<div class="modal fade" id="modal-token-sale" tabindex="-1" role="dialog" aria-labelledby="modal-token-sale-labelledby"
+     data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -344,39 +340,8 @@ pagina: Home
                 </h4>
             </div>
             <div class="modal-body">
-                <div class="show-on show-on--sale-terms-agreed">
-                    <div class="show-on show-on--sale-round1">
-                        <span>
-                            The first 24 hours of the token sale will be individually capped with a minimum
-                            and maximum contribution per person.
-                        </span>
-                        <ul>
-                            <li>Minimum contribution : 0,01 ETH</li>
-                            <li>Maximum contribution : 1 ETH</li>
-                            <li>Gas Limit : 350 000</li>
-                        </ul>
-                    </div>
-                    <div class="show-on show-on--sale-round2">
-                        <span>
-                            The individual cap per person is lifted. It is now possible to contribute more than 1 ETH
-                            until the hard cap is reached.
-                        </span>
-                        <ul>
-                            <li>Minimum contribution : 0,01 ETH</li>
-                            <li>Maximum contribution : no limit until hard cap reached</li>
-                            <li>Gas Limit : 350 000</li>
-                        </ul>
-                    </div>
-                    <div class="alert alert-info">
-                        <h4 class="text-center">Token Sale Smart Contract Address</h4>
-                        <p class="text-center">
-                            <samp class="eth-address">0x0000000000000000000000000000000000000000</samp>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="hide-on hide-on--sale-kyc-verified">
-                    <h5 class="text-center">Enter ETH address to verify KYC</h5>
+                <div class="hide-on hide-on--sale-terms-agreed">
+                    <h5 class="text-center">Enter your KYC approved ETH address</h5>
                     <div class="input-group">
                         <span class="input-group-addon">ETH Wallet Address</span>
                         <input id="eth-address-modal" class="form-control" type="text" maxlength="42" minlength="42"
@@ -385,8 +350,8 @@ pagina: Home
                             <button data-eth-address-check="eth-address-modal" class="btn btn-warning">Check</button>
                         </span>
                     </div>
+                    <p data-kyc-status class="kyc-status-message text-center"></p>
                 </div>
-                <p data-kyc-status class="kyc-status-message text-center"></p>
 
                 <div class="show-on show-on--sale-kyc-verified hide-on hide-on--sale-terms-agreed">
                     <h5 class="text-center">Terms and conditions</h5>
@@ -1080,14 +1045,72 @@ pagina: Home
                     </div>
                     <div class="text-center">
                         <p>
-                            <input data-checkbox-toggle-class="sale-terms-agreed" type="checkbox"
-                                   value="terms-and-conditions"/>
-                            I have read and agree to the
-                            <a href="assets/Terms-Conditions.pdf" target="_blank">terms and conditions</a>.
+                            <button class="btn btn-warning" id="agreed-to-terms"
+                                    data-checkbox-toggle-class="sale-terms-agreed">
+                                I have read and agree to the terms and conditions!
+                            </button>
                         </p>
                     </div>
                 </div>
 
+                <div class="show-on show-on--sale-terms-agreed">
+
+                    <div class="alert alert-info">
+                        <h4 class="text-center">Token Sale Smart Contract Address</h4>
+                        <p class="text-center">
+
+                        <div class="input-group">
+                            <input id="token-sale-address" class="form-control" type="text" maxlength="42"
+                                   minlength="42" disabled="disabled"
+                                   data-toggle="popover" data-content="Copied!"
+                                   value="0xBCC546EB5a290977180f85CAfaA712019893729c"/>
+                            <span class="input-group-btn">
+                                <button class="btn" type="button" id="btnCopyTokenSaleAddress">
+                                    <img class="clippy" src="assets/img/clippy.svg" width="13" alt="Copy to clipboard">
+                                </button>
+                        </span>
+                        </div>
+
+                        <div class="show-on show-on--sale-round1">
+                            <p></p>
+                            <ul>
+                                <li>Minimum contribution : 0,01 ETH</li>
+                                <li>Maximum contribution : <strong>1 ETH</strong></li>
+                                <li>Gas Limit : 350000</li>
+                                <li>Do <strong>NOT</strong> send directly from an exchange</li>
+                            </ul>
+                        </div>
+                        <div class="show-on show-on--sale-round2">
+                            <p></p>
+                            <ul>
+                                <li>Minimum contribution : 0,01 ETH</li>
+                                <li>Maximum contribution : no limit until hard cap reached</li>
+                                <li>Gas Limit : 350000</li>
+                                <li>Do <strong>NOT</strong> send directly from an exchange</li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                    <div class="text-center show-on show-on--sale-terms-agreed">
+                        <p>
+                            <small>To verify the contract address, please look at the video below from our CEO:</small>
+                        </p>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="//www.youtube.com/embed/oHULkQuS1vQ"></iframe>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="text-center show-on show-on--sale-terms-agreed">
+                        <p>
+                            <small>Having problems? Please go to <a target="_blank" href="https://support.fundrequest.io">support.fundrequest.io</a> </small>
+                        </p>
+                    </div>
+
+                    <hr/>
+                </div>
                 <div class="text-center show-on show-on--sale-terms-agreed">
                     <small>
                         Note: by participating in our token sale you agree with our
