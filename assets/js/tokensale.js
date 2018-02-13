@@ -154,7 +154,7 @@ $(function() {
       document.body.classList.remove('sale-terms-agreed');
       document.body.classList.add('sale-terms-agreed');
   });
-
+  
     $('[data-checkbox-toggle-class]').on('change', function() {
         var className = this.dataset.checkboxToggleClass;
         if (className) {
@@ -174,5 +174,4 @@ $(function() {
 
 
     });
-
 });
