@@ -90,8 +90,10 @@
         }
     }
 
-    addClass('sale-not-started');
-    initCountDown();
+    //addClass('sale-not-started');
+    //initCountDown();
+
+    addClass('sale-closed');
 })();
 
 /*
