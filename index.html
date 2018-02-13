@@ -138,6 +138,7 @@ pagina: Home
                     <li>Maximum contribution : no limit until hard cap reached</li>
                     <li>Gas Limit : 350 000</li>
                 </ul>
+
                 <button class="btn btn-warning btn-lg show-on show-on--sale-not-started show-on show-on--sale-round1"
                         disabled>Join soon
                 </button>
@@ -146,6 +147,21 @@ pagina: Home
                     Join Token Sale
                 </button>
                 <button class="btn btn-warning btn-lg show-on show-on--sale-closed" disabled>CLOSED</button>
+            </div>
+        </div>
+        <div class="row"  data-process style="display: none;">
+            <div class="col-sm-12 col-md-8 col-md-push-2">
+                <h2 class="center">
+                    <span data-procent-remaining-value>--</span>
+                    <!--<span>of</span>-->
+                    <!--<span>15000</span> <span>ETH</span>-->
+                    <span>remaining</span>
+                    <!--small>(<span data-remaining-value>--</span> ETH)</small-->
+                </h2>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" data-procent-sold style="width:70%"></div>
+                    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" data-procent-remaining style="width:30%"></div>
+                </div>
             </div>
         </div>
     </div>
