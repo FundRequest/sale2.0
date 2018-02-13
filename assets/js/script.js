@@ -86,7 +86,6 @@ $(document).ready(function() {
 
     $(".lslide").change(function() {
         var test = $(this).data("data-title");
-        console.log(test);
     });
 
     window.onscroll = function(e) {
