@@ -36,7 +36,7 @@
 
         function updateRemaining() {
             if(totalSold !== null && ethLeft !== null) {
-                var tokensLeft = ethLeft * 1800;
+                var tokensLeft = Math.round(ethLeft * 1800);
                 var totalSupply = totalSold + tokensLeft;
                 var pctLeft = Math.round((tokensLeft / totalSupply) * 100);
                 var pctSold = 100 - pctLeft;
