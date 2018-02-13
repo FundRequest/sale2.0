@@ -138,15 +138,17 @@ pagina: Home
         <div class="row"  data-process style="display: none;">
             <div class="col-sm-12 col-md-8 col-md-push-2">
                 <h2 class="center">
-                    <span data-procent-remaining-value>--</span>
-                    <!--<span>of</span>-->
-                    <!--<span>15000</span> <span>ETH</span>-->
-                    <span>remaining</span>
-                    <!--small>(<span data-remaining-value>--</span> ETH)</small-->
+                    <span data-tokens-available-percentage-value>--</span>
+                    <span>tokens remaining</span>
+                    <!--small>(<span data-remaining-value>--</span>)</small-->
                 </h2>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" data-procent-sold style="width:70%"></div>
-                    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" data-procent-remaining style="width:30%"></div>
+                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" data-tokens-sold-percentage style="width:70%">
+                        <span data-tokens-sold>--</span> tokens distributed
+                    </div>
+                    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" data-tokens-available-percentage style="width:30%">
+                        <span data-tokens-available>--</span> tokens available
+                    </div>
                 </div>
             </div>
         </div>
