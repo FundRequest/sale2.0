@@ -113,6 +113,10 @@ $(function() {
                 statusEl.innerHTML = 'Your address is whitelisted and KYC approved!';
                 statusEl.classList.add('alert-success');
                 document.body.classList.add('sale-kyc-verified');
+            } else if (status === 'invalid') {
+                statusEl.innerHTML = '<strong>Oeps!</strong> You entered an invalid address.';
+                statusEl.classList.add('alert-warning');
+                document.body.classList.remove('sale-kyc-verified');
             } else {
                 statusEl.innerHTML = '<strong>Oh snap!</strong> Address <samp class="eth-address">' + ethAddress + '</samp> has not passed KYC.';
                 statusEl.classList.add('alert-warning');
@@ -131,22 +135,24 @@ $(function() {
         if (ethAddress.length <= 0) {
             updateStatus('Please enter your ETH wallet address.', null);
         } else {
-            $.ajax({
-                type: 'GET',
-                url: 'https://kyc.fundrequest.io/kyc/status/' + ethAddress,
-                beforeSend: function() {
-                    updateStatus('Checking <samp class="eth-address">' + ethAddress + '</samp> ...', null);
-                },
-                success: function(response) {
-                    var status = null;
+            updateStatus('Checking <samp class="eth-address">' + ethAddress + '</samp> ...', null);
+            try {
+                fnd.contractInstance.allowed.call(ethAddress, function(err, result){
+                    var resultNumber = 0;
+                    try {
+                        resultNumber = parseInt(new BigNumber(result).toString());
+                    } catch(e) {}
 
-                    if (response && response.status) {
-                        status = response.status.status;
+                    if(!err && resultNumber > 0) {
+                        updateStatus('approve', ethAddress);
+                    } else {
+                        updateStatus('not-approved', ethAddress);
                     }
+                });
+            } catch(e) {
+                updateStatus('invalid', ethAddress);
+            }
 
-                    updateStatus(status, ethAddress);
-                }
-            });
         }
     });
 
@@ -164,6 +170,7 @@ $(function() {
             }
         }
     });
+
     $('#btnCopyTokenSaleAddress').on('click', function() {
       var $btnTokenSale = $('#token-sale-address');
       $btnTokenSale.removeAttr("disabled");
@@ -171,7 +178,5 @@ $(function() {
       copyText.select();
       document.execCommand("Copy");
       $btnTokenSale.attr("disabled", "disabled")
-
-
     });
 });

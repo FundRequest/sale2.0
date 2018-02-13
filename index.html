@@ -97,12 +97,32 @@ pagina: Home
                     Join Token Sale - Round 2
                 </button>
             </div>
+            <div class="col-sm-12">
+                <h3>Not whitelisted? <a href="https://waitlist.fundrequest.io" target="_blank">Join our wait list now!</a></h3>
+            </div>
         </div>
     </div>
 </section>
 
 <section class="section section--white section--compact">
     <div class="container">
+        <div class="row" data-process style="display: none;">
+            <div class="col-sm-12 col-md-8 col-md-push-2">
+                <h2 class="center">
+                    <span data-tokens-available-percentage-value>--</span>
+                    <span>tokens remaining</span>
+                    <!--small>(<span data-remaining-value>--</span>)</small-->
+                </h2>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" data-tokens-sold-percentage style="width:70%">
+                        <span data-tokens-sold>--</span> tokens distributed
+                    </div>
+                    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" data-tokens-available-percentage style="width:30%">
+                        <span data-tokens-available>--</span> tokens available
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-6 blur-on--sale-round2 blur-on--sale-closed">
                 <h2>
@@ -133,23 +153,6 @@ pagina: Home
                     <li>Maximum contribution : no limit until hard cap reached</li>
                     <li>Gas Limit : 350 000</li>
                 </ul>
-            </div>
-        </div>
-        <div class="row"  data-process style="display: none;">
-            <div class="col-sm-12 col-md-8 col-md-push-2">
-                <h2 class="center">
-                    <span data-tokens-available-percentage-value>--</span>
-                    <span>tokens remaining</span>
-                    <!--small>(<span data-remaining-value>--</span>)</small-->
-                </h2>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" data-tokens-sold-percentage style="width:70%">
-                        <span data-tokens-sold>--</span> tokens distributed
-                    </div>
-                    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" data-tokens-available-percentage style="width:30%">
-                        <span data-tokens-available>--</span> tokens available
-                    </div>
-                </div>
             </div>
         </div>
     </div>
